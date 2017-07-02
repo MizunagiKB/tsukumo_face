@@ -1,0 +1,1319 @@
+[gd_scene load_steps=13 format=1]
+
+[ext_resource path="res://res/model/conv/conv.tres" type="Mesh" id=1]
+[ext_resource path="res://res/model/conv/conv_face.tres" type="Mesh" id=2]
+[ext_resource path="res://scr/face_control.gd" type="Script" id=3]
+[ext_resource path="res://res/model/conv/conv_eyebaseLt.tres" type="Mesh" id=4]
+[ext_resource path="res://res/model/conv/conv_eyeLt.tres" type="Mesh" id=5]
+[ext_resource path="res://res/model/conv/conv_eyebaseRt.tres" type="Mesh" id=6]
+[ext_resource path="res://res/model/conv/conv_eyeRt.tres" type="Mesh" id=7]
+[ext_resource path="res://res/model/conv/conv_faceParts.tres" type="Mesh" id=8]
+[ext_resource path="res://res/model/conv/conv_namida.tres" type="Mesh" id=9]
+[ext_resource path="res://res/model/conv/conv_tere.tres" type="Mesh" id=10]
+
+[sub_resource type="Environment" id=1]
+
+ambient_light/enabled = false
+ambient_light/color = Color( 0, 0, 0, 1 )
+ambient_light/energy = 1.0
+fxaa/enabled = true
+background/mode = 2
+background/color = Color( 0.191406, 0.19696, 0.21875, 1 )
+background/energy = 1.0
+background/scale = 1.0
+background/glow = 0.0
+background/canvas_max_layer = null
+glow/enabled = false
+glow/blur_passes = 1
+glow/blur_scale = 1
+glow/blur_strength = 1
+glow/blur_blend_mode = null
+glow/bloom = 0.0
+glow/bloom_treshold = 0.5
+dof_blur/enabled = false
+dof_blur/blur_passes = 1
+dof_blur/begin = 100.0
+dof_blur/range = 10.0
+hdr/enabled = false
+hdr/tonemapper = 0
+hdr/exposure = 0.4
+hdr/white = 1.0
+hdr/glow_treshold = 0.95
+hdr/glow_scale = 0.2
+hdr/min_luminance = 0.4
+hdr/max_luminance = 8.0
+hdr/exposure_adj_speed = 0.5
+fog/enabled = false
+fog/begin = 100.0
+fog/begin_color = Color( 0, 0, 0, 1 )
+fog/end_color = Color( 0, 0, 0, 1 )
+fog/attenuation = 1.0
+fog/bg = true
+bcs/enabled = false
+bcs/brightness = 1.0
+bcs/contrast = 1.0
+bcs/saturation = 1.0
+srgb/enabled = false
+
+[sub_resource type="Environment" id=2]
+
+ambient_light/enabled = false
+ambient_light/color = Color( 0, 0, 0, 1 )
+ambient_light/energy = 1.0
+fxaa/enabled = false
+background/mode = 1
+background/color = Color( 0, 0, 0, 1 )
+background/energy = 1.0
+background/scale = 1.0
+background/glow = 0.0
+background/canvas_max_layer = null
+glow/enabled = false
+glow/blur_passes = 1
+glow/blur_scale = 1
+glow/blur_strength = 1
+glow/blur_blend_mode = null
+glow/bloom = 0.0
+glow/bloom_treshold = 0.5
+dof_blur/enabled = false
+dof_blur/blur_passes = 1
+dof_blur/begin = 100.0
+dof_blur/range = 10.0
+hdr/enabled = false
+hdr/tonemapper = 0
+hdr/exposure = 0.4
+hdr/white = 1.0
+hdr/glow_treshold = 0.95
+hdr/glow_scale = 0.2
+hdr/min_luminance = 0.4
+hdr/max_luminance = 8.0
+hdr/exposure_adj_speed = 0.5
+fog/enabled = false
+fog/begin = 100.0
+fog/begin_color = Color( 0, 0, 0, 1 )
+fog/end_color = Color( 0, 0, 0, 1 )
+fog/attenuation = 1.0
+fog/bg = true
+bcs/enabled = false
+bcs/brightness = 1.0
+bcs/contrast = 1.0
+bcs/saturation = 1.0
+srgb/enabled = false
+
+[node name="main" type="Node"]
+
+[node name="TsukumoMil" type="Spatial" parent="."]
+
+_import_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+
+[node name="skin" type="MeshInstance" parent="TsukumoMil"]
+
+_import_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+layers = 1
+geometry/visible = true
+geometry/material_override = null
+geometry/cast_shadow = 1
+geometry/receive_shadows = true
+geometry/range_begin = 0.0
+geometry/range_end = 0.0
+geometry/extra_cull_margin = 0.0
+geometry/billboard = false
+geometry/billboard_y = false
+geometry/depth_scale = false
+geometry/visible_in_all_rooms = false
+geometry/use_baked_light = false
+geometry/baked_light_tex_id = 0
+mesh/mesh = ExtResource( 1 )
+mesh/skeleton = NodePath("..")
+material/0 = null
+material/1 = null
+material/2 = null
+material/3 = null
+
+[node name="face" type="MeshInstance" parent="TsukumoMil/skin"]
+
+_import_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+layers = 1
+geometry/visible = true
+geometry/material_override = null
+geometry/cast_shadow = 1
+geometry/receive_shadows = true
+geometry/range_begin = 0.0
+geometry/range_end = 0.0
+geometry/extra_cull_margin = 0.0
+geometry/billboard = false
+geometry/billboard_y = false
+geometry/depth_scale = false
+geometry/visible_in_all_rooms = false
+geometry/use_baked_light = false
+geometry/baked_light_tex_id = 0
+mesh/mesh = ExtResource( 2 )
+mesh/skeleton = NodePath("..")
+morph/a = 0.0
+morph/anger = 0.0
+morph/blink = 0.0
+morph/calm = 0.0
+morph/close = 0.0
+"morph/go down" = 0.0
+"morph/go up" = 0.0
+morph/grin = 0.0
+morph/i = 0.0
+morph/namida = 0.0
+morph/nicori_1 = 0.0
+morph/nicori_2 = 0.0
+morph/o = 0.0
+morph/sadness = 0.0
+morph/sakebu = 0.0
+"morph/small eyes" = 0.0
+morph/smile = 0.0
+morph/tere = 0.0
+morph/triangle = 0.0
+morph/u = 0.0
+morph/wa = 0.0
+material/0 = null
+script/script = ExtResource( 3 )
+
+[node name="eyebaseLt" type="MeshInstance" parent="TsukumoMil/skin/face"]
+
+_import_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+layers = 1
+geometry/visible = true
+geometry/material_override = null
+geometry/cast_shadow = 1
+geometry/receive_shadows = true
+geometry/range_begin = 0.0
+geometry/range_end = 0.0
+geometry/extra_cull_margin = 0.0
+geometry/billboard = false
+geometry/billboard_y = false
+geometry/depth_scale = false
+geometry/visible_in_all_rooms = false
+geometry/use_baked_light = false
+geometry/baked_light_tex_id = 0
+mesh/mesh = ExtResource( 4 )
+mesh/skeleton = NodePath("..")
+morph/a = 0.0
+morph/anger = 0.0
+morph/blink = 0.0
+morph/calm = 0.0
+morph/close = 0.0
+"morph/go down" = 0.0
+"morph/go up" = 0.0
+morph/grin = 0.0
+morph/i = 0.0
+morph/namida = 0.0
+morph/nicori_1 = 0.0
+morph/nicori_2 = 0.0
+morph/o = 0.0
+morph/sadness = 0.0
+morph/sakebu = 0.0
+"morph/small eyes" = 0.0
+morph/smile = 0.0
+morph/tere = 0.0
+morph/triangle = 0.0
+morph/u = 0.0
+morph/wa = 0.0
+material/0 = null
+
+[node name="eyeLt" type="MeshInstance" parent="TsukumoMil/skin/face/eyebaseLt"]
+
+_import_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+layers = 1
+geometry/visible = true
+geometry/material_override = null
+geometry/cast_shadow = 1
+geometry/receive_shadows = true
+geometry/range_begin = 0.0
+geometry/range_end = 0.0
+geometry/extra_cull_margin = 0.0
+geometry/billboard = false
+geometry/billboard_y = false
+geometry/depth_scale = false
+geometry/visible_in_all_rooms = false
+geometry/use_baked_light = false
+geometry/baked_light_tex_id = 0
+mesh/mesh = ExtResource( 5 )
+mesh/skeleton = NodePath("..")
+morph/a = 0.0
+morph/anger = 0.0
+morph/blink = 0.0
+morph/calm = 0.0
+morph/close = 0.0
+"morph/go down" = 0.0
+"morph/go up" = 0.0
+morph/grin = 0.0
+morph/i = 0.0
+morph/namida = 0.0
+morph/nicori_1 = 0.0
+morph/nicori_2 = 0.0
+morph/o = 0.0
+morph/sadness = 0.0
+morph/sakebu = 0.0
+"morph/small eyes" = 0.0
+morph/smile = 0.0
+morph/tere = 0.0
+morph/triangle = 0.0
+morph/u = 0.0
+morph/wa = 0.0
+material/0 = null
+
+[node name="eyebaseRt" type="MeshInstance" parent="TsukumoMil/skin/face"]
+
+_import_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+layers = 1
+geometry/visible = true
+geometry/material_override = null
+geometry/cast_shadow = 1
+geometry/receive_shadows = true
+geometry/range_begin = 0.0
+geometry/range_end = 0.0
+geometry/extra_cull_margin = 0.0
+geometry/billboard = false
+geometry/billboard_y = false
+geometry/depth_scale = false
+geometry/visible_in_all_rooms = false
+geometry/use_baked_light = false
+geometry/baked_light_tex_id = 0
+mesh/mesh = ExtResource( 6 )
+mesh/skeleton = NodePath("..")
+morph/a = 0.0
+morph/anger = 0.0
+morph/blink = 0.0
+morph/calm = 0.0
+morph/close = 0.0
+"morph/go down" = 0.0
+"morph/go up" = 0.0
+morph/grin = 0.0
+morph/i = 0.0
+morph/namida = 0.0
+morph/nicori_1 = 0.0
+morph/nicori_2 = 0.0
+morph/o = 0.0
+morph/sadness = 0.0
+morph/sakebu = 0.0
+"morph/small eyes" = 0.0
+morph/smile = 0.0
+morph/tere = 0.0
+morph/triangle = 0.0
+morph/u = 0.0
+morph/wa = 0.0
+material/0 = null
+
+[node name="eyeRt" type="MeshInstance" parent="TsukumoMil/skin/face/eyebaseRt"]
+
+_import_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+layers = 1
+geometry/visible = true
+geometry/material_override = null
+geometry/cast_shadow = 1
+geometry/receive_shadows = true
+geometry/range_begin = 0.0
+geometry/range_end = 0.0
+geometry/extra_cull_margin = 0.0
+geometry/billboard = false
+geometry/billboard_y = false
+geometry/depth_scale = false
+geometry/visible_in_all_rooms = false
+geometry/use_baked_light = false
+geometry/baked_light_tex_id = 0
+mesh/mesh = ExtResource( 7 )
+mesh/skeleton = NodePath("..")
+morph/a = 0.0
+morph/anger = 0.0
+morph/blink = 0.0
+morph/calm = 0.0
+morph/close = 0.0
+"morph/go down" = 0.0
+"morph/go up" = 0.0
+morph/grin = 0.0
+morph/i = 0.0
+morph/namida = 0.0
+morph/nicori_1 = 0.0
+morph/nicori_2 = 0.0
+morph/o = 0.0
+morph/sadness = 0.0
+morph/sakebu = 0.0
+"morph/small eyes" = 0.0
+morph/smile = 0.0
+morph/tere = 0.0
+morph/triangle = 0.0
+morph/u = 0.0
+morph/wa = 0.0
+material/0 = null
+
+[node name="faceParts" type="MeshInstance" parent="TsukumoMil/skin/face"]
+
+_import_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+layers = 1
+geometry/visible = true
+geometry/material_override = null
+geometry/cast_shadow = 1
+geometry/receive_shadows = true
+geometry/range_begin = 0.0
+geometry/range_end = 0.0
+geometry/extra_cull_margin = 0.0
+geometry/billboard = false
+geometry/billboard_y = false
+geometry/depth_scale = false
+geometry/visible_in_all_rooms = false
+geometry/use_baked_light = false
+geometry/baked_light_tex_id = 0
+mesh/mesh = ExtResource( 8 )
+mesh/skeleton = NodePath("..")
+morph/a = 0.0
+morph/anger = 0.0
+morph/blink = 0.0
+morph/calm = 0.0
+morph/close = 0.0
+"morph/go down" = 0.0
+"morph/go up" = 0.0
+morph/grin = 0.0
+morph/i = 0.0
+morph/namida = 0.0
+morph/nicori_1 = 0.0
+morph/nicori_2 = 0.0
+morph/o = 0.0
+morph/sadness = 0.0
+morph/sakebu = 0.0
+"morph/small eyes" = 0.0
+morph/smile = 0.0
+morph/tere = 0.0
+morph/triangle = 0.0
+morph/u = 0.0
+morph/wa = 0.0
+material/0 = null
+
+[node name="namida" type="MeshInstance" parent="TsukumoMil/skin/face"]
+
+_import_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+layers = 1
+geometry/visible = true
+geometry/material_override = null
+geometry/cast_shadow = 1
+geometry/receive_shadows = true
+geometry/range_begin = 0.0
+geometry/range_end = 0.0
+geometry/extra_cull_margin = 0.0
+geometry/billboard = false
+geometry/billboard_y = false
+geometry/depth_scale = false
+geometry/visible_in_all_rooms = false
+geometry/use_baked_light = false
+geometry/baked_light_tex_id = 0
+mesh/mesh = ExtResource( 9 )
+mesh/skeleton = NodePath("..")
+morph/a = 0.0
+morph/anger = 0.0
+morph/blink = 0.0
+morph/calm = 0.0
+morph/close = 0.0
+"morph/go down" = 0.0
+"morph/go up" = 0.0
+morph/grin = 0.0
+morph/i = 0.0
+morph/namida = 0.0
+morph/nicori_1 = 0.0
+morph/nicori_2 = 0.0
+morph/o = 0.0
+morph/sadness = 0.0
+morph/sakebu = 0.0
+"morph/small eyes" = 0.0
+morph/smile = 0.0
+morph/tere = 0.0
+morph/triangle = 0.0
+morph/u = 0.0
+morph/wa = 0.0
+material/0 = null
+
+[node name="tere" type="MeshInstance" parent="TsukumoMil/skin/face"]
+
+_import_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+layers = 1
+geometry/visible = true
+geometry/material_override = null
+geometry/cast_shadow = 1
+geometry/receive_shadows = true
+geometry/range_begin = 0.0
+geometry/range_end = 0.0
+geometry/extra_cull_margin = 0.0
+geometry/billboard = false
+geometry/billboard_y = false
+geometry/depth_scale = false
+geometry/visible_in_all_rooms = false
+geometry/use_baked_light = false
+geometry/baked_light_tex_id = 0
+mesh/mesh = ExtResource( 10 )
+mesh/skeleton = NodePath("..")
+morph/a = 0.0
+morph/anger = 0.0
+morph/blink = 0.0
+morph/calm = 0.0
+morph/close = 0.0
+"morph/go down" = 0.0
+"morph/go up" = 0.0
+morph/grin = 0.0
+morph/i = 0.0
+morph/namida = 0.0
+morph/nicori_1 = 0.0
+morph/nicori_2 = 0.0
+morph/o = 0.0
+morph/sadness = 0.0
+morph/sakebu = 0.0
+"morph/small eyes" = 0.0
+morph/smile = 0.0
+morph/tere = 0.0
+morph/triangle = 0.0
+morph/u = 0.0
+morph/wa = 0.0
+material/0 = null
+
+[node name="ui" type="Control" parent="."]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 0.0
+margin/right = 40.0
+margin/bottom = 40.0
+
+[node name="lbl_a" type="Label" parent="ui"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 680.0
+margin/top = 24.0
+margin/right = 776.0
+margin/bottom = 48.0
+text = "morph/a"
+align = 2
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="slider_a" type="HSlider" parent="ui/lbl_a"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 104.0
+margin/top = 0.0
+margin/right = 336.0
+margin/bottom = 24.0
+range/min = 0.0
+range/max = 1.0
+range/step = 0.1
+range/page = 0.0
+range/value = 0.0
+range/exp_edit = false
+range/rounded = false
+tick_count = 0
+ticks_on_borders = true
+focus_mode = 2
+
+[node name="lbl_anger" type="Label" parent="ui"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 680.0
+margin/top = 48.0
+margin/right = 776.0
+margin/bottom = 72.0
+text = "morph/anger"
+align = 2
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="slider_anger" type="HSlider" parent="ui/lbl_anger"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 104.0
+margin/top = 0.0
+margin/right = 336.0
+margin/bottom = 24.0
+range/min = 0.0
+range/max = 1.0
+range/step = 0.1
+range/page = 0.0
+range/value = 0.0
+range/exp_edit = false
+range/rounded = false
+tick_count = 0
+ticks_on_borders = true
+focus_mode = 2
+
+[node name="lbl_blink" type="Label" parent="ui"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 680.0
+margin/top = 72.0
+margin/right = 776.0
+margin/bottom = 96.0
+text = "morph/blink"
+align = 2
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="slider_blink" type="HSlider" parent="ui/lbl_blink"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 104.0
+margin/top = 0.0
+margin/right = 336.0
+margin/bottom = 24.0
+range/min = 0.0
+range/max = 1.0
+range/step = 0.1
+range/page = 0.0
+range/value = 0.0
+range/exp_edit = false
+range/rounded = false
+tick_count = 0
+ticks_on_borders = true
+focus_mode = 2
+
+[node name="lbl_calm" type="Label" parent="ui"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 680.0
+margin/top = 96.0
+margin/right = 776.0
+margin/bottom = 120.0
+text = "morph/calm"
+align = 2
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="slider_calm" type="HSlider" parent="ui/lbl_calm"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 104.0
+margin/top = 0.0
+margin/right = 336.0
+margin/bottom = 24.0
+range/min = 0.0
+range/max = 1.0
+range/step = 0.1
+range/page = 0.0
+range/value = 0.0
+range/exp_edit = false
+range/rounded = false
+tick_count = 0
+ticks_on_borders = true
+focus_mode = 2
+
+[node name="lbl_close" type="Label" parent="ui"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 680.0
+margin/top = 120.0
+margin/right = 776.0
+margin/bottom = 144.0
+text = "morph/close"
+align = 2
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="slider_close" type="HSlider" parent="ui/lbl_close"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 104.0
+margin/top = 0.0
+margin/right = 336.0
+margin/bottom = 24.0
+range/min = 0.0
+range/max = 1.0
+range/step = 0.1
+range/page = 0.0
+range/value = 0.0
+range/exp_edit = false
+range/rounded = false
+tick_count = 0
+ticks_on_borders = true
+focus_mode = 2
+
+[node name="lbl_go_down" type="Label" parent="ui"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 648.0
+margin/top = 144.0
+margin/right = 776.0
+margin/bottom = 168.0
+text = "morph/go down"
+align = 2
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="slider_go_down" type="HSlider" parent="ui/lbl_go_down"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 136.0
+margin/top = 0.0
+margin/right = 368.0
+margin/bottom = 24.0
+range/min = 0.0
+range/max = 1.0
+range/step = 0.1
+range/page = 0.0
+range/value = 0.0
+range/exp_edit = false
+range/rounded = false
+tick_count = 0
+ticks_on_borders = true
+focus_mode = 2
+
+[node name="lbl_go_up" type="Label" parent="ui"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 680.0
+margin/top = 168.0
+margin/right = 776.0
+margin/bottom = 192.0
+text = "morph/go up"
+align = 2
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="slider_go_up" type="HSlider" parent="ui/lbl_go_up"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 104.0
+margin/top = 0.0
+margin/right = 336.0
+margin/bottom = 24.0
+range/min = 0.0
+range/max = 1.0
+range/step = 0.1
+range/page = 0.0
+range/value = 0.0
+range/exp_edit = false
+range/rounded = false
+tick_count = 0
+ticks_on_borders = true
+focus_mode = 2
+
+[node name="lbl_grin" type="Label" parent="ui"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 680.0
+margin/top = 192.0
+margin/right = 776.0
+margin/bottom = 216.0
+text = "morph/grin"
+align = 2
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="slider_grin" type="HSlider" parent="ui/lbl_grin"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 104.0
+margin/top = 0.0
+margin/right = 336.0
+margin/bottom = 24.0
+range/min = 0.0
+range/max = 1.0
+range/step = 0.1
+range/page = 0.0
+range/value = 0.0
+range/exp_edit = false
+range/rounded = false
+tick_count = 0
+ticks_on_borders = true
+focus_mode = 2
+
+[node name="lbl_i" type="Label" parent="ui"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 680.0
+margin/top = 216.0
+margin/right = 776.0
+margin/bottom = 240.0
+text = "morph/i"
+align = 2
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="slider_i" type="HSlider" parent="ui/lbl_i"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 104.0
+margin/top = 0.0
+margin/right = 336.0
+margin/bottom = 24.0
+range/min = 0.0
+range/max = 1.0
+range/step = 0.1
+range/page = 0.0
+range/value = 0.0
+range/exp_edit = false
+range/rounded = false
+tick_count = 0
+ticks_on_borders = true
+focus_mode = 2
+
+[node name="lbl_namida" type="Label" parent="ui"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 680.0
+margin/top = 240.0
+margin/right = 776.0
+margin/bottom = 264.0
+text = "morph/namida"
+align = 2
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="slider_namida" type="HSlider" parent="ui/lbl_namida"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 104.0
+margin/top = 0.0
+margin/right = 336.0
+margin/bottom = 24.0
+range/min = 0.0
+range/max = 1.0
+range/step = 0.1
+range/page = 0.0
+range/value = 0.0
+range/exp_edit = false
+range/rounded = false
+tick_count = 0
+ticks_on_borders = true
+focus_mode = 2
+
+[node name="lbl_nicori_1" type="Label" parent="ui"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 648.0
+margin/top = 264.0
+margin/right = 776.0
+margin/bottom = 288.0
+text = "morph/nicori_1"
+align = 2
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="slider_nicori_1" type="HSlider" parent="ui/lbl_nicori_1"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 136.0
+margin/top = 0.0
+margin/right = 368.0
+margin/bottom = 24.0
+range/min = 0.0
+range/max = 1.0
+range/step = 0.1
+range/page = 0.0
+range/value = 0.0
+range/exp_edit = false
+range/rounded = false
+tick_count = 0
+ticks_on_borders = true
+focus_mode = 2
+
+[node name="lbl_nicori_2" type="Label" parent="ui"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 648.0
+margin/top = 288.0
+margin/right = 776.0
+margin/bottom = 312.0
+text = "morph/nicori_2"
+align = 2
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="slider_nicori_2" type="HSlider" parent="ui/lbl_nicori_2"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 136.0
+margin/top = 0.0
+margin/right = 368.0
+margin/bottom = 24.0
+range/min = 0.0
+range/max = 1.0
+range/step = 0.1
+range/page = 0.0
+range/value = 0.0
+range/exp_edit = false
+range/rounded = false
+tick_count = 0
+ticks_on_borders = true
+focus_mode = 2
+
+[node name="lbl_o" type="Label" parent="ui"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 680.0
+margin/top = 312.0
+margin/right = 776.0
+margin/bottom = 336.0
+text = "morph/o"
+align = 2
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="slider_o" type="HSlider" parent="ui/lbl_o"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 104.0
+margin/top = 0.0
+margin/right = 336.0
+margin/bottom = 24.0
+range/min = 0.0
+range/max = 1.0
+range/step = 0.1
+range/page = 0.0
+range/value = 0.0
+range/exp_edit = false
+range/rounded = false
+tick_count = 0
+ticks_on_borders = true
+focus_mode = 2
+
+[node name="lbl_sadness" type="Label" parent="ui"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 648.0
+margin/top = 336.0
+margin/right = 776.0
+margin/bottom = 360.0
+text = "morph/sadness"
+align = 2
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="slider_sadness" type="HSlider" parent="ui/lbl_sadness"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 136.0
+margin/top = 0.0
+margin/right = 368.0
+margin/bottom = 24.0
+range/min = 0.0
+range/max = 1.0
+range/step = 0.1
+range/page = 0.0
+range/value = 0.0
+range/exp_edit = false
+range/rounded = false
+tick_count = 0
+ticks_on_borders = true
+focus_mode = 2
+
+[node name="lbl_sakebu" type="Label" parent="ui"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 680.0
+margin/top = 360.0
+margin/right = 776.0
+margin/bottom = 384.0
+text = "morph/sakebu"
+align = 2
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="slider_sakebu" type="HSlider" parent="ui/lbl_sakebu"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 104.0
+margin/top = 0.0
+margin/right = 336.0
+margin/bottom = 24.0
+range/min = 0.0
+range/max = 1.0
+range/step = 0.1
+range/page = 0.0
+range/value = 0.0
+range/exp_edit = false
+range/rounded = false
+tick_count = 0
+ticks_on_borders = true
+focus_mode = 2
+
+[node name="lbl_small_eyes" type="Label" parent="ui"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 592.0
+margin/top = 384.0
+margin/right = 776.0
+margin/bottom = 408.0
+text = "morph/small eyes"
+align = 2
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="slider_small_eyes" type="HSlider" parent="ui/lbl_small_eyes"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 192.0
+margin/top = 0.0
+margin/right = 424.0
+margin/bottom = 24.0
+range/min = 0.0
+range/max = 1.0
+range/step = 0.1
+range/page = 0.0
+range/value = 0.0
+range/exp_edit = false
+range/rounded = false
+tick_count = 0
+ticks_on_borders = true
+focus_mode = 2
+
+[node name="lbl_smile" type="Label" parent="ui"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 680.0
+margin/top = 408.0
+margin/right = 776.0
+margin/bottom = 432.0
+text = "morph/smile"
+align = 2
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="slider_smile" type="HSlider" parent="ui/lbl_smile"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 104.0
+margin/top = 0.0
+margin/right = 336.0
+margin/bottom = 24.0
+range/min = 0.0
+range/max = 1.0
+range/step = 0.1
+range/page = 0.0
+range/value = 0.0
+range/exp_edit = false
+range/rounded = false
+tick_count = 0
+ticks_on_borders = true
+focus_mode = 2
+
+[node name="lbl_tere" type="Label" parent="ui"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 680.0
+margin/top = 432.0
+margin/right = 776.0
+margin/bottom = 456.0
+text = "morph/tere"
+align = 2
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="slider_tere" type="HSlider" parent="ui/lbl_tere"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 104.0
+margin/top = 0.0
+margin/right = 336.0
+margin/bottom = 24.0
+range/min = 0.0
+range/max = 1.0
+range/step = 0.1
+range/page = 0.0
+range/value = 0.0
+range/exp_edit = false
+range/rounded = false
+tick_count = 0
+ticks_on_borders = true
+focus_mode = 2
+
+[node name="lbl_triangle" type="Label" parent="ui"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 680.0
+margin/top = 456.0
+margin/right = 776.0
+margin/bottom = 480.0
+text = "morph/triangle"
+align = 2
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="slider_triangle" type="HSlider" parent="ui/lbl_triangle"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 104.0
+margin/top = 0.0
+margin/right = 336.0
+margin/bottom = 24.0
+range/min = 0.0
+range/max = 1.0
+range/step = 0.1
+range/page = 0.0
+range/value = 0.0
+range/exp_edit = false
+range/rounded = false
+tick_count = 0
+ticks_on_borders = true
+focus_mode = 2
+
+[node name="lbl_u" type="Label" parent="ui"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 680.0
+margin/top = 480.0
+margin/right = 776.0
+margin/bottom = 504.0
+text = "morph/u"
+align = 2
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="slider_u" type="HSlider" parent="ui/lbl_u"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 104.0
+margin/top = 0.0
+margin/right = 336.0
+margin/bottom = 24.0
+range/min = 0.0
+range/max = 1.0
+range/step = 0.1
+range/page = 0.0
+range/value = 0.0
+range/exp_edit = false
+range/rounded = false
+tick_count = 0
+ticks_on_borders = true
+focus_mode = 2
+
+[node name="lbl_wa" type="Label" parent="ui"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 680.0
+margin/top = 504.0
+margin/right = 776.0
+margin/bottom = 528.0
+text = "morph/wa"
+align = 2
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="slider_wa" type="HSlider" parent="ui/lbl_wa"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 104.0
+margin/top = 0.0
+margin/right = 336.0
+margin/bottom = 24.0
+range/min = 0.0
+range/max = 1.0
+range/step = 0.1
+range/page = 0.0
+range/value = 0.0
+range/exp_edit = false
+range/rounded = false
+tick_count = 0
+ticks_on_borders = true
+focus_mode = 2
+
+[node name="Camera" type="Camera" parent="."]
+
+_import_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+transform/local = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.133756, 3.63272, 2.67488 )
+projection = 1
+size = 1.0
+near = 0.1
+far = 100.0
+keep_aspect = 1
+current = true
+visible_layers = 1048575
+environment = SubResource( 1 )
+h_offset = 0.0
+v_offset = 0.0
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+
+_import_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+environment = SubResource( 2 )
+
+[connection signal="value_changed" from="ui/lbl_a/slider_a" to="TsukumoMil/skin/face" method="_on_slider_a_value_changed"]
+
+[connection signal="value_changed" from="ui/lbl_anger/slider_anger" to="TsukumoMil/skin/face" method="_on_slider_anger_value_changed"]
+
+[connection signal="value_changed" from="ui/lbl_blink/slider_blink" to="TsukumoMil/skin/face" method="_on_slider_blink_value_changed"]
+
+[connection signal="value_changed" from="ui/lbl_calm/slider_calm" to="TsukumoMil/skin/face" method="_on_slider_calm_value_changed"]
+
+[connection signal="value_changed" from="ui/lbl_close/slider_close" to="TsukumoMil/skin/face" method="_on_slider_close_value_changed"]
+
+[connection signal="value_changed" from="ui/lbl_go_down/slider_go_down" to="TsukumoMil/skin/face" method="_on_slider_go_down_value_changed"]
+
+[connection signal="value_changed" from="ui/lbl_go_up/slider_go_up" to="TsukumoMil/skin/face" method="_on_slider_go_up_value_changed"]
+
+[connection signal="value_changed" from="ui/lbl_grin/slider_grin" to="TsukumoMil/skin/face" method="_on_slider_grin_value_changed"]
+
+[connection signal="value_changed" from="ui/lbl_i/slider_i" to="TsukumoMil/skin/face" method="_on_slider_i_value_changed"]
+
+[connection signal="value_changed" from="ui/lbl_namida/slider_namida" to="TsukumoMil/skin/face" method="_on_slider_namida_value_changed"]
+
+[connection signal="value_changed" from="ui/lbl_nicori_1/slider_nicori_1" to="TsukumoMil/skin/face" method="_on_slider_nicori_1_value_changed"]
+
+[connection signal="value_changed" from="ui/lbl_nicori_2/slider_nicori_2" to="TsukumoMil/skin/face" method="_on_slider_nicori_2_value_changed"]
+
+[connection signal="value_changed" from="ui/lbl_o/slider_o" to="TsukumoMil/skin/face" method="_on_slider_o_value_changed"]
+
+[connection signal="value_changed" from="ui/lbl_sadness/slider_sadness" to="TsukumoMil/skin/face" method="_on_slider_sadness_value_changed"]
+
+[connection signal="value_changed" from="ui/lbl_sakebu/slider_sakebu" to="TsukumoMil/skin/face" method="_on_slider_sakebu_value_changed"]
+
+[connection signal="value_changed" from="ui/lbl_small_eyes/slider_small_eyes" to="TsukumoMil/skin/face" method="_on_slider_small_eyes_value_changed"]
+
+[connection signal="value_changed" from="ui/lbl_smile/slider_smile" to="TsukumoMil/skin/face" method="_on_slider_smile_value_changed"]
+
+[connection signal="value_changed" from="ui/lbl_tere/slider_tere" to="TsukumoMil/skin/face" method="_on_slider_tere_value_changed"]
+
+[connection signal="value_changed" from="ui/lbl_triangle/slider_triangle" to="TsukumoMil/skin/face" method="_on_slider_triangle_value_changed"]
+
+[connection signal="value_changed" from="ui/lbl_u/slider_u" to="TsukumoMil/skin/face" method="_on_slider_u_value_changed"]
+
+[connection signal="value_changed" from="ui/lbl_wa/slider_wa" to="TsukumoMil/skin/face" method="_on_slider_wa_value_changed"]
+
+
